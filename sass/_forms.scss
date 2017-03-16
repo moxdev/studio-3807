@@ -1,6 +1,6 @@
 form {
 	text-align: left;
-	padding-top: 2.75em;
+	// padding-top: 2.75em;
 	padding-bottom: 1.25em;
 
 	@include respond-to(small) {
@@ -68,8 +68,7 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea,
-select {
+textarea {
 	border: 1px solid $_color-border-input;
 	width: 100%;
 	margin-bottom: 15px;
@@ -77,4 +76,23 @@ select {
 	padding: 8px 4px 4px;
 	color: #333;
 	text-shadow:none;
+}
+
+select {
+	border: 1px solid $_color-border-input;
+	width: 100%;
+	margin-bottom: 15px;
+	border-radius: 0;
+	padding: 8px 4px 4px;
+	color: $_color-brand-color-3;
+	text-shadow:none;
+	-webkit-appearance: none;
+	    -moz-appearance: none;
+	    text-overflow: '';
+}
+
+select option {
+    margin: 40px;
+    color: #333;
+    text-shadow: none;
 }

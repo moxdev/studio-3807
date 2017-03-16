@@ -1,8 +1,9 @@
 #colophon {
 	color: #fff;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	font-size: .8125em;
+	line-height: 1.2;
 
 	& .wrapper:before, & .wrapper:after {
 		@include clearfix;
@@ -14,27 +15,33 @@
 
 	.footer-callout {
 		font-family: $_font-main-semibold;
-		font-weight: normal;
-	}
 
-	svg#eho {
-		color: #fff;
-		width: 35px;
-		height: 34px;
-		margin-top: .75em;
-	}
-
-	@include respond-to(med) {
-		text-align: left;
-		font-size: .75em;
-
-		.contact-info {
-			float: left;
+		h4 {
+			margin: .5em 0;
+			font-weight: normal;
 		}
 
 		svg#eho {
-			float: right;
-			margin-top: 0;
+			color: #fff;
+			width: 35px;
+			height: 34px;
+			// margin-top: .75em;
 		}
 	}
+
+
+
+	// @include respond-to(med) {
+	// 	text-align: left;
+	// 	font-size: .75em;
+
+	// 	.contact-info {
+	// 		float: left;
+	// 	}
+
+	// 	svg#eho {
+	// 		float: right;
+	// 		margin-top: 0;
+	// 	}
+	// }
 }

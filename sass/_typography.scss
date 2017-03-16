@@ -82,51 +82,21 @@ h1, h2 {
 h1 {
     font-size: 1.75em;
     line-height: 1.0625;
-    text-align: center;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
 
-    a {
-        color:$_color-brand-color-2;
-        text-decoration: none;
-    }
+    // @include respond-to(small) {
+    //     font-size: 2em;
+    // }
 
-    span {
-        display: block;
-    }
-
-    span.top {
-        margin-top: .5em;
-    }
-
-    .highlight {
-        font-family: $_font-main-bold;
-        margin-bottom: .375em;
-        font-size: 1.5em;
-        text-transform: uppercase;
-    }
-
-    @include respond-to(small) {
-        font-size: 2em;
-    }
-
-    @include respond-to(large) {
-        font-size: 2.5em;
-    }
+    // @include respond-to(large) {
+    //     font-size: 2.5em;
+    // }
 }
 
 h2 {
-    font-size: 1.625em;
-    line-height: 1.125;
-    margin-bottom: .375em;
-}
-
-p {
-    font-size: .9375em;
-}
-
-.special {
-    font-size: 1.3125em;
+    font-size: 1.3em;
     line-height: 1.125;
 }
+
+// p {
+//     font-size: .9375em;
+// }

@@ -350,59 +350,11 @@ h1, h2 {
 h1 {
   font-size: 1.75em;
   line-height: 1.0625;
-  text-align: center;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
 }
-/* line 90, ../sass/_typography.scss */
-h1 a {
-  color: #000;
-  text-decoration: none;
-}
+
 /* line 95, ../sass/_typography.scss */
-h1 span {
-  display: block;
-}
-/* line 99, ../sass/_typography.scss */
-h1 span.top {
-  margin-top: .5em;
-}
-/* line 103, ../sass/_typography.scss */
-h1 .highlight {
-  font-family: "Montserrat-Bold", sans-serif;
-  margin-bottom: .375em;
-  font-size: 1.5em;
-  text-transform: uppercase;
-}
-@media (min-width: 750px) {
-  /* line 82, ../sass/_typography.scss */
-  h1 {
-    font-size: 2em;
-  }
-}
-@media (min-width: 1200px) {
-  /* line 82, ../sass/_typography.scss */
-  h1 {
-    font-size: 2.5em;
-  }
-}
-
-/* line 119, ../sass/_typography.scss */
 h2 {
-  font-size: 1.625em;
-  line-height: 1.125;
-  margin-bottom: .375em;
-}
-
-/* line 125, ../sass/_typography.scss */
-p {
-  font-size: .9375em;
-}
-
-/* line 129, ../sass/_typography.scss */
-.special {
-  font-size: 1.3125em;
+  font-size: 1.3em;
   line-height: 1.125;
 }
 
@@ -467,7 +419,6 @@ input[type="submit"]:hover {
 /* line 1, ../sass/_forms.scss */
 form {
   text-align: left;
-  padding-top: 2.75em;
   padding-bottom: 1.25em;
 }
 @media (min-width: 750px) {
@@ -546,13 +497,33 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea,
+textarea {
+  border: 1px solid #FFF;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 0;
+  padding: 8px 4px 4px;
+  color: #333;
+  text-shadow: none;
+}
+
+/* line 81, ../sass/_forms.scss */
 select {
   border: 1px solid #FFF;
   width: 100%;
   margin-bottom: 15px;
   border-radius: 0;
   padding: 8px 4px 4px;
+  color: #888B8D;
+  text-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-overflow: '';
+}
+
+/* line 94, ../sass/_forms.scss */
+select option {
+  margin: 40px;
   color: #333;
   text-shadow: none;
 }
@@ -631,7 +602,9 @@ select {
 @media (min-width: 750px) {
   /* line 1, ../sass/_masthead.scss */
   #masthead {
-    padding: 0 20px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -639,15 +612,15 @@ select {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  /* line 71, ../sass/_masthead.scss */
+  /* line 73, ../sass/_masthead.scss */
   #masthead .logo svg {
     max-width: 150px;
   }
-  /* line 76, ../sass/_masthead.scss */
+  /* line 78, ../sass/_masthead.scss */
   #masthead .social {
     padding-top: 0;
   }
-  /* line 83, ../sass/_masthead.scss */
+  /* line 85, ../sass/_masthead.scss */
   #masthead .social .social-wrapper {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -656,7 +629,7 @@ select {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  /* line 87, ../sass/_masthead.scss */
+  /* line 89, ../sass/_masthead.scss */
   #masthead .social .social-wrapper .email {
     padding-right: 1em;
   }
@@ -668,47 +641,35 @@ select {
 /* line 1, ../sass/_colophon.scss */
 #colophon {
   color: #fff;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: .8125em;
+  line-height: 1.2;
 }
-/* line 7, ../sass/_colophon.scss */
+/* line 8, ../sass/_colophon.scss */
 #colophon .wrapper:before, #colophon .wrapper:after {
   content: "";
   display: table;
   table-layout: fixed;
 }
-/* line 11, ../sass/_colophon.scss */
+/* line 12, ../sass/_colophon.scss */
 #colophon .wrapper:after {
   clear: both;
 }
-/* line 15, ../sass/_colophon.scss */
+/* line 16, ../sass/_colophon.scss */
 #colophon .footer-callout {
   font-family: "Montserrat-SemiBold", sans-serif;
+}
+/* line 19, ../sass/_colophon.scss */
+#colophon .footer-callout h4 {
+  margin: .5em 0;
   font-weight: normal;
 }
-/* line 20, ../sass/_colophon.scss */
-#colophon svg#eho {
+/* line 24, ../sass/_colophon.scss */
+#colophon .footer-callout svg#eho {
   color: #fff;
   width: 35px;
   height: 34px;
-  margin-top: .75em;
-}
-@media (min-width: 950px) {
-  /* line 1, ../sass/_colophon.scss */
-  #colophon {
-    text-align: left;
-    font-size: .75em;
-  }
-  /* line 31, ../sass/_colophon.scss */
-  #colophon .contact-info {
-    float: left;
-  }
-  /* line 35, ../sass/_colophon.scss */
-  #colophon svg#eho {
-    float: right;
-    margin-top: 0;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -721,6 +682,11 @@ body {
 }
 
 /* line 6, ../sass/_content.scss */
+article {
+  background-color: #fff;
+}
+
+/* line 10, ../sass/_content.scss */
 .wrapper {
   padding-left: 20px;
   padding-right: 20px;
@@ -728,34 +694,59 @@ body {
   max-width: 1000px;
 }
 
-/* line 13, ../sass/_content.scss */
+/* line 17, ../sass/_content.scss */
 .article-content {
-  background-color: #fff;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-/* line 18, ../sass/_content.scss */
-.article-content h1 {
-  color: #005F83;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: left;
 }
 /* line 22, ../sass/_content.scss */
-.article-content ul {
-  margin: 0;
+.article-content h1 {
+  color: #005F83;
+  margin-bottom: .25em;
+  padding-right: 1em;
 }
-/* line 25, ../sass/_content.scss */
+/* line 28, ../sass/_content.scss */
+.article-content ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+}
+/* line 32, ../sass/_content.scss */
 .article-content ul li {
   color: #888B8D;
+  padding: 0;
+  margin: 0;
+  padding: .25em;
+  font-size: .9em;
+  line-height: 140%;
+}
+@media (min-width: 750px) {
+  /* line 17, ../sass/_content.scss */
+  .article-content {
+    text-align: center;
+  }
+  /* line 44, ../sass/_content.scss */
+  .article-content ul {
+    -webkit-columns: 200px 2;
+       -moz-columns: 200px 2;
+            columns: 200px 2;
+    -webkit-column-gap: 3em;
+       -moz-column-gap: 3em;
+            column-gap: 3em;
+    text-align: left;
+  }
 }
 
-/* line 31, ../sass/_content.scss */
-.dividing-h2 {
+/* line 52, ../sass/_content.scss */
+h2 {
   background-color: #8a2a2b;
   color: #fff;
   margin: 0;
-  padding: .5em 0;
+  padding: .5em;
 }
 
-/* line 38, ../sass/_content.scss */
+/* line 59, ../sass/_content.scss */
 .pics {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -763,7 +754,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-/* line 42, ../sass/_content.scss */
+/* line 63, ../sass/_content.scss */
 .pics .pic-wrap {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
@@ -771,7 +762,7 @@ body {
   overflow: hidden;
   position: relative;
 }
-/* line 48, ../sass/_content.scss */
+/* line 69, ../sass/_content.scss */
 .pics .pic-wrap:nth-child(odd):after {
   content: '';
   width: 3px;
@@ -781,29 +772,29 @@ body {
   top: 0;
   bottom: 0;
 }
-/* line 58, ../sass/_content.scss */
+/* line 79, ../sass/_content.scss */
 .pics .pic-wrap:nth-child(1), .pics .pic-wrap:nth-child(2) {
   border-bottom: 3px solid #FFF;
 }
-/* line 62, ../sass/_content.scss */
+/* line 83, ../sass/_content.scss */
 .pics img {
   display: block;
   width: 100%;
   max-width: none;
 }
 @media (min-width: 750px) {
-  /* line 38, ../sass/_content.scss */
+  /* line 59, ../sass/_content.scss */
   .pics {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  /* line 71, ../sass/_content.scss */
+  /* line 92, ../sass/_content.scss */
   .pics .pic-wrap {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 25%;
             flex: 1 1 25%;
   }
-  /* line 75, ../sass/_content.scss */
+  /* line 96, ../sass/_content.scss */
   .pics .pic-wrap:nth-child(2):after {
     content: '';
     width: 3px;
@@ -813,56 +804,55 @@ body {
     top: 0;
     bottom: 0;
   }
-  /* line 85, ../sass/_content.scss */
+  /* line 106, ../sass/_content.scss */
   .pics .pic-wrap, .pics .pic-wrap:nth-child(1), .pics .pic-wrap:nth-child(2) {
     border-bottom: none;
   }
 }
 
-/* line 91, ../sass/_content.scss */
+/* line 112, ../sass/_content.scss */
 .highlight-img {
   display: block;
   margin: 0;
 }
 
-/* line 96, ../sass/_content.scss */
+/* line 117, ../sass/_content.scss */
 #secondary {
   font-size: .9375em;
   background-color: #000;
   color: #FFF;
-  padding-top: 2em;
   padding-bottom: 1em;
 }
-/* line 105, ../sass/_content.scss */
+/* line 126, ../sass/_content.scss */
 #secondary .wrapper:before, #secondary .wrapper:after {
   content: "";
   display: table;
   table-layout: fixed;
 }
-/* line 109, ../sass/_content.scss */
+/* line 130, ../sass/_content.scss */
 #secondary .wrapper:after {
   clear: both;
 }
-/* line 118, ../sass/_content.scss */
+/* line 139, ../sass/_content.scss */
 #secondary form {
   font-family: "Raleway-Bold", sans-serif;
 }
-/* line 122, ../sass/_content.scss */
+/* line 143, ../sass/_content.scss */
 #secondary button {
   font-family: "Raleway-Bold", sans-serif;
 }
 @media (min-width: 950px) {
-  /* line 96, ../sass/_content.scss */
+  /* line 117, ../sass/_content.scss */
   #secondary {
     font-size: .8125em;
   }
-  /* line 129, ../sass/_content.scss */
+  /* line 150, ../sass/_content.scss */
   #secondary .wrapper {
     text-align: left;
     padding-top: 70px;
     padding-bottom: 70px;
   }
-  /* line 134, ../sass/_content.scss */
+  /* line 155, ../sass/_content.scss */
   #secondary .wrapper > div {
     float: left;
     width: 35%;
