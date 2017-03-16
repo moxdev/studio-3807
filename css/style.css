@@ -632,33 +632,32 @@ select {
 --------------------------------------------------------------*/
 /* line 1, ../sass/_colophon.scss */
 #colophon {
+  color: #fff;
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: .8125em;
 }
-/* line 6, ../sass/_colophon.scss */
+/* line 7, ../sass/_colophon.scss */
 #colophon .wrapper:before, #colophon .wrapper:after {
   content: "";
   display: table;
   table-layout: fixed;
 }
-/* line 10, ../sass/_colophon.scss */
+/* line 11, ../sass/_colophon.scss */
 #colophon .wrapper:after {
   clear: both;
 }
-/* line 14, ../sass/_colophon.scss */
+/* line 15, ../sass/_colophon.scss */
+#colophon .footer-callout {
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-weight: normal;
+}
+/* line 20, ../sass/_colophon.scss */
 #colophon svg#eho {
+  color: #fff;
   width: 35px;
   height: 34px;
   margin-top: .75em;
-}
-/* line 20, ../sass/_colophon.scss */
-#colophon #brand-uip {
-  display: table;
-  margin-top: 1em;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 125px;
 }
 @media (min-width: 950px) {
   /* line 1, ../sass/_colophon.scss */
@@ -666,18 +665,14 @@ select {
     text-align: left;
     font-size: .75em;
   }
-  /* line 32, ../sass/_colophon.scss */
+  /* line 31, ../sass/_colophon.scss */
   #colophon .contact-info {
     float: left;
   }
-  /* line 36, ../sass/_colophon.scss */
-  #colophon svg#eho, #colophon #brand-uip {
+  /* line 35, ../sass/_colophon.scss */
+  #colophon svg#eho {
     float: right;
     margin-top: 0;
-  }
-  /* line 41, ../sass/_colophon.scss */
-  #colophon #brand-uip {
-    margin-left: 1em;
   }
 }
 

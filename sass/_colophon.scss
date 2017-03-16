@@ -1,4 +1,5 @@
 #colophon {
+	color: #fff;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	font-size: .8125em;
@@ -11,18 +12,16 @@
 		@include clearfix-after;
 	}
 
+	.footer-callout {
+		font-family: $_font-main-semibold;
+		font-weight: normal;
+	}
+
 	svg#eho {
+		color: #fff;
 		width: 35px;
 		height: 34px;
 		margin-top: .75em;
-	}
-
-	#brand-uip {
-		display: table;
-		margin-top: 1em;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 125px;
 	}
 
 	@include respond-to(med) {
@@ -33,13 +32,9 @@
 			float: left;
 		}
 
-		svg#eho, #brand-uip {
+		svg#eho {
 			float: right;
 			margin-top: 0;
-		}
-
-		#brand-uip {
-			margin-left: 1em;
 		}
 	}
 }
