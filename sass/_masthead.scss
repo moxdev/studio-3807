@@ -2,60 +2,97 @@
 	font-family: $_font-main-bold;
 	background-color: $_color-brand-color-1;
 	color:#fff ;
-	padding:20px;
+	padding: 0 10px;
+	text-align: center;
 
 	svg {
-		width: 90%;
+		display: block;
 		height: auto;
 		margin: 0 auto;
-		display: block;
-		max-width: 325px;
 	}
 
-	.tel {
-		display: table;
-		margin-top: 1em;
-		font-size: 1.75em;
-		margin-left: auto;
-		margin-right: auto;
-		line-height: 1.25;
-		color: #fff;
-		font-family: $_font-raleway-semibold;
+	.logo {
+		padding-top: .5em;
+
+		svg {
+			max-width: 100px;
+		}
+
+	}
+
+	.social {
+		padding: 1em 0 .5em;
+
+		.callout {
+			padding: .5em 1em;
+			background-color: $_color-brand-color-4;
+		}
+
+		.email {
+
+			a {
+				color: #fff;
+				font-family: $_font-raleway-semibold;
+				font-size:  0.9rem;
+				text-decoration: none;
+			}
+		}
+
+		.icons {
+			width: 100%;
+			display: inline-flex;
+			justify-content: center;
+			align-items:center;
+			margin-top: .5em;
+
+			.instagram {
+				margin: 0 2px;
+				svg {
+					max-width: 30px;
+				}
+			}
+
+			.facebook {
+				margin: 1px 2px 2px;
+				svg {
+					max-width: 30px;
+				}
+			}
+		}
 	}
 
 	@include respond-to(small) {
-		svg {
-			max-width: 450px;
+		padding: 0 20px;
+		display: flex;
+		justify-content: space-between;
+		// align-content:flex-start;
+
+		.logo {
+			svg {
+				max-width: 150px;
+			}
 		}
 
-		h1 {
-			float: left;
-			text-align: left;
-			width: 68%;
-		}
+		.social {
+			padding-top: 0;
 
-		.tel {
-			float: right;
-			width: 28%;
-			margin-top: 0;
-			text-align: right;
-		}
+			.callout {
 
-		&:before, &:after {
-			@include clearfix;
-		}
+			}
 
-		&:after {
-			@include clearfix-after;
-		}
-	}
+			.social-wrapper {
+				display: inline-flex;
+				align-items: flex-end;
 
-	@include respond-to(large) {
-		padding-top: 2.5em;
-		padding-bottom: 2em;
+				.email {
+					padding-right: 1em;
 
-		svg {
-			max-width: 550px;
+				}
+
+				.icons {
+
+				}
+			}
 		}
 	}
 }

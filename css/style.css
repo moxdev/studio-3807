@@ -565,65 +565,100 @@ select {
   font-family: "Montserrat-Bold", sans-serif;
   background-color: #005F83;
   color: #fff;
-  padding: 20px;
+  padding: 0 10px;
+  text-align: center;
 }
-/* line 7, ../sass/_masthead.scss */
+/* line 8, ../sass/_masthead.scss */
 #masthead svg {
-  width: 90%;
+  display: block;
   height: auto;
   margin: 0 auto;
-  display: block;
-  max-width: 325px;
 }
-/* line 15, ../sass/_masthead.scss */
-#masthead .tel {
-  display: table;
-  margin-top: 1em;
-  font-size: 1.75em;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.25;
+/* line 14, ../sass/_masthead.scss */
+#masthead .logo {
+  padding-top: .5em;
+}
+/* line 17, ../sass/_masthead.scss */
+#masthead .logo svg {
+  max-width: 100px;
+}
+/* line 23, ../sass/_masthead.scss */
+#masthead .social {
+  padding: 1em 0 .5em;
+}
+/* line 26, ../sass/_masthead.scss */
+#masthead .social .callout {
+  padding: .5em 1em;
+  background-color: #8a2a2b;
+}
+/* line 33, ../sass/_masthead.scss */
+#masthead .social .email a {
   color: #fff;
   font-family: "Raleway-Medium", sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+/* line 41, ../sass/_masthead.scss */
+#masthead .social .icons {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: .5em;
+}
+/* line 48, ../sass/_masthead.scss */
+#masthead .social .icons .instagram {
+  margin: 0 2px;
+}
+/* line 50, ../sass/_masthead.scss */
+#masthead .social .icons .instagram svg {
+  max-width: 30px;
+}
+/* line 55, ../sass/_masthead.scss */
+#masthead .social .icons .facebook {
+  margin: 1px 2px 2px;
+}
+/* line 57, ../sass/_masthead.scss */
+#masthead .social .icons .facebook svg {
+  max-width: 30px;
 }
 @media (min-width: 750px) {
-  /* line 27, ../sass/_masthead.scss */
-  #masthead svg {
-    max-width: 450px;
-  }
-  /* line 31, ../sass/_masthead.scss */
-  #masthead h1 {
-    float: left;
-    text-align: left;
-    width: 68%;
-  }
-  /* line 37, ../sass/_masthead.scss */
-  #masthead .tel {
-    float: right;
-    width: 28%;
-    margin-top: 0;
-    text-align: right;
-  }
-  /* line 44, ../sass/_masthead.scss */
-  #masthead:before, #masthead:after {
-    content: "";
-    display: table;
-    table-layout: fixed;
-  }
-  /* line 48, ../sass/_masthead.scss */
-  #masthead:after {
-    clear: both;
-  }
-}
-@media (min-width: 1200px) {
   /* line 1, ../sass/_masthead.scss */
   #masthead {
-    padding-top: 2.5em;
-    padding-bottom: 2em;
+    padding: 0 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  /* line 57, ../sass/_masthead.scss */
-  #masthead svg {
-    max-width: 550px;
+  /* line 71, ../sass/_masthead.scss */
+  #masthead .logo svg {
+    max-width: 150px;
+  }
+  /* line 76, ../sass/_masthead.scss */
+  #masthead .social {
+    padding-top: 0;
+  }
+  /* line 83, ../sass/_masthead.scss */
+  #masthead .social .social-wrapper {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  /* line 87, ../sass/_masthead.scss */
+  #masthead .social .social-wrapper .email {
+    padding-right: 1em;
   }
 }
 

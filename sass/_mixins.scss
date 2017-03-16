@@ -4,6 +4,37 @@
 	font-size: $sizeValue * 1rem;
 }
 
+@mixin max-width($maxwidth) {
+  max-width: $maxwidth;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// Outside padding
+@mixin padding-left-right() {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+
+    @include respond-to('tablet') {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+// Absolute position
+@mixin absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin reset {
+  padding:0;
+  margin: 0;
+}
+
 // Center block
 @mixin center-block {
 	display: block;

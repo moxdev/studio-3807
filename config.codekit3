@@ -9,6 +9,24 @@
 	],
 "creatorBuild": "25704",
 "files": {
+	"\/*project\/notes.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/*project\/notes.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"\/bs-config.js": {
 		"ft": 64,
 		"mi": 1,
@@ -390,6 +408,46 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/imgs\/facebook.png": {
+		"ft": 32768,
+		"iS": 1205,
+		"l": 1,
+		"oA": 0,
+		"oAP": "\/imgs\/facebook.png",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/imgs\/facebook.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/facebook.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/imgs\/instagram.png": {
+		"ft": 32768,
+		"iS": 2716,
+		"l": 1,
+		"oA": 0,
+		"oAP": "\/imgs\/instagram.png",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/imgs\/instagram.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/instagram.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/imgs\/lobby.jpg": {
 		"ft": 16384,
 		"iS": 138903,
@@ -398,6 +456,26 @@
 		"oF": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"\/imgs\/logo.png": {
+		"ft": 32768,
+		"iS": 95224,
+		"l": 1,
+		"oA": 0,
+		"oAP": "\/imgs\/logo.png",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/imgs\/logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/imgs\/lounge.jpg": {
 		"ft": 16384,
