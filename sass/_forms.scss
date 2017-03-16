@@ -1,0 +1,80 @@
+form {
+	text-align: left;
+	padding-top: 2.75em;
+	padding-bottom: 1.25em;
+
+	@include respond-to(small) {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display:flex;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+
+		.flex {
+			-ms-flex:1 1 45%;
+			flex:1 1 45%;
+			margin: 5px;
+		}
+	}
+
+	@include respond-to(med) {
+		padding-left: 2em;
+		padding-top: 0;
+	}
+}
+
+label {
+	display: block;
+	font-size: .75em;
+}
+
+.honey {
+	display: none!important;
+}
+
+.error-box {
+	font-size:.875em;
+	padding: 1em;
+	border:1px solid #F00;
+	display: none;
+	margin-bottom: 15px;
+	color: #F00;
+	background-color: #FFF;
+	width: 100%;
+	text-shadow:none;
+
+	@include respond-to(small) {
+		margin-left: 4px;
+		margin-right: 4px;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+	border: 1px solid $_color-border-input;
+	width: 100%;
+	margin-bottom: 15px;
+	border-radius: 0;
+	padding: 8px 4px 4px;
+	color: #333;
+	text-shadow:none;
+}

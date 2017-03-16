@@ -1,0 +1,1 @@
+var validator=new FormValidator("form-contact",[{name:"form-email",display:"Email",rules:"required|valid_email"}],function(e,r){if(e.length>0){var a=jQuery(".error-box");if(e.length>0){a.empty();for(var o=0,n=e.length;n>o;o++)a.append(e[o].message+"<br />"),console.log(e[o].name),jQuery('input[name="'+e[o].name+'"]').css("border-color","#F00");a.fadeIn(1e3)}}});

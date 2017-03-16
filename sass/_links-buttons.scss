@@ -1,0 +1,37 @@
+a {
+	color: $_color-brand-color-1;
+}
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: none;
+	background-color: $color_background-button;
+	color: #FFF;
+	font-size:.875em;
+	line-height: 1;
+	padding: .875em 1.75em;
+	transition:background-color .25s ease-in-out, border-color .25s;
+	text-decoration: none;
+	border-radius: 0;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: lighten($_color-brand-color-2, 40%);
+	}
+
+	@include respond-to(small) {
+		font-size:1em;
+		margin-left: 5px;
+	}
+}
+
+.tel {
+	text-decoration: none!important;
+
+	&:hover {
+		cursor: text;
+	}
+}

@@ -1,0 +1,61 @@
+#masthead {
+	font-family: $_font-main-bold;
+	background-color: $_color-brand-color-1;
+	color:#fff ;
+	padding:20px;
+
+	svg {
+		width: 90%;
+		height: auto;
+		margin: 0 auto;
+		display: block;
+		max-width: 325px;
+	}
+
+	.tel {
+		display: table;
+		margin-top: 1em;
+		font-size: 1.75em;
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 1.25;
+		color: #fff;
+		font-family: $_font-raleway-semibold;
+	}
+
+	@include respond-to(small) {
+		svg {
+			max-width: 450px;
+		}
+
+		h1 {
+			float: left;
+			text-align: left;
+			width: 68%;
+		}
+
+		.tel {
+			float: right;
+			width: 28%;
+			margin-top: 0;
+			text-align: right;
+		}
+
+		&:before, &:after {
+			@include clearfix;
+		}
+
+		&:after {
+			@include clearfix-after;
+		}
+	}
+
+	@include respond-to(large) {
+		padding-top: 2.5em;
+		padding-bottom: 2em;
+
+		svg {
+			max-width: 550px;
+		}
+	}
+}
