@@ -884,7 +884,7 @@ h2 {
 #secondary {
   font-size: .9em;
   background-color: #000;
-  color: #FFF;
+  color: #fff;
   padding-bottom: 1em;
 }
 /* line 134, ../sass/_content.scss */
@@ -901,10 +901,33 @@ h2 {
     padding-top: 2em;
   }
   /* line 145, ../sass/_content.scss */
-  #secondary .wrappper {
+  #secondary .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /* line 149, ../sass/_content.scss */
+  #secondary .wrapper .left-text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: right;
+  }
+  /* line 153, ../sass/_content.scss */
+  #secondary .wrapper .left-text p {
+    width: 250px;
+    padding: 0;
+    margin: 0;
+    padding-left: 3em;
+  }
+  /* line 162, ../sass/_content.scss */
+  #secondary .wrapper form {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
   }
 }
 

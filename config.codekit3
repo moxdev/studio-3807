@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25704",
 "files": {
+	"\/*project\/notes.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/*project\/notes.html",
+		"oF": 0
+		},
 	"\/*project\/notes.md": {
 		"cS": 0,
 		"eF": 1,

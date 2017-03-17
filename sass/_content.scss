@@ -128,7 +128,7 @@ h2 {
 #secondary {
 	font-size: .9em;
 	background-color: $_color-brand-color-2;
-	color: #FFF;
+	color: #fff;
 	padding-bottom: 1em;
 
 	form {
@@ -142,23 +142,26 @@ h2 {
 	@include respond-to(med) {
 	    padding-top: 2em;
 
-	    .wrappper {
+	    .wrapper {
 			display: flex;
+			justify-content: center;
+
+			.left-text {
+				flex: 1;
+				text-align: right;
+
+				p {
+					width: 250px;
+					@include reset;
+					padding-left: 3em;
+					// padding-right: 3em;
+				}
+
+			}
+
+			form {
+				flex: 2;
+			}
 	    }
 	}
-
-	// @include respond-to(med) {
-	// 	font-size: .8125em;
-
-	// 	.wrapper {
-	// 		text-align: left;
-	// 		padding-top: 70px;
-	// 		padding-bottom: 70px;
-
-	// 		> div {
-	// 			float: left;
-	// 			width: 35%;
-	// 		}
-	// 	}
-	// }
 }
