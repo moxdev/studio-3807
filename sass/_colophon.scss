@@ -29,19 +29,29 @@
 		}
 	}
 
+	@include respond-to(med) {
+	    .wrapper {
+	    	@include padding-left-right;
+	    	max-width: none;
+	    	display: flex;
+	    	justify-content: space-between;
+	    	padding-top: .5em;
+	    	padding-bottom: 1em;
 
+	    	.contact-info {
+	    		text-align: left;
+	    	}
 
-	// @include respond-to(med) {
-	// 	text-align: left;
-	// 	font-size: .75em;
+	    	.footer-callout {
+	    		text-align: right;
+	    		display: inline-flex;
+	    		margin-left: auto;
 
-	// 	.contact-info {
-	// 		float: left;
-	// 	}
+	    		h4 {
+	    			margin-right: 1em;
+	    		}
+	    	}
+	    }
+	}
 
-	// 	svg#eho {
-	// 		float: right;
-	// 		margin-top: 0;
-	// 	}
-	// }
 }

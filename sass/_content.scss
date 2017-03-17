@@ -46,16 +46,19 @@ article {
 	    text-align: center;
 
 	    ul {
+	    	margin: 0 1em;
 	    	columns: 200px 2;
-	    	column-gap: 1em;
+	    	column-gap: 2em;
 	    	text-align: left;
-	    }
-	}
 
-	@include respond-to(med) {
+	    	@include respond-to(med) {
+	    	    column-gap: 2.5em;
+	    	    margin: 0 2em;
+	    	}
 
-	    ul {
-	    	column-gap: 2.5em;
+	    	@include respond-to(large) {
+	    	   margin: 0 1em;
+	    	}
 	    }
 	}
 }
@@ -65,6 +68,10 @@ h2 {
 	color: #fff;
 	margin: 0;
 	padding: .5em;
+
+	@include respond-to(med) {
+	    padding: .3em;
+	}
 }
 
 .pics {
@@ -129,6 +136,7 @@ h2 {
 	font-size: .9em;
 	background-color: $_color-brand-color-2;
 	color: #fff;
+	padding-top: 1em;
 	padding-bottom: 1em;
 
 	form {
@@ -137,6 +145,13 @@ h2 {
 
 	button {
 		font-family: $_font-raleway-bold;
+		@include respond-to(small) {
+		    font-size: .8em;
+		}
+
+		@include respond-to(medium) {
+		    font-size: .7em;
+		}
 	}
 
 	@include respond-to(med) {
@@ -153,14 +168,26 @@ h2 {
 				p {
 					width: 250px;
 					@include reset;
-					padding-left: 3em;
-					// padding-right: 3em;
+					padding-left: 2em;
 				}
 
 			}
 
 			form {
 				flex: 2;
+			}
+	    }
+	}
+
+	@include respond-to(large) {
+
+	    .wrapper {
+
+			.left-text {
+
+				p {
+					padding-left: 0;
+				}
 			}
 	    }
 	}

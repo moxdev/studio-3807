@@ -108,73 +108,13 @@
 		}
 	}
 
-	// @include respond-to(med) {
+	@include respond-to(large) {
 
-	// 	.logo {
-	// 		svg {
-	// 			max-width: 150px;
-	// 		}
-	// 	}
+		.social {
+			.callout {
+				padding: 0;
+			}
+		}
 
-	// 	.social {
-
-	// 		.callout {
-	// 			font-size: 1.3em;
-	// 			padding: .25em 1em;
-	// 		}
-
-	// 		.social-wrapper {
-	// 			display: inline-flex;
-	// 			align-items: flex-end;
-	// 			padding-top: .5em;
-
-	// 			.email {
-	// 				padding-right: 1em;
-
-	// 				a {
-
-	// 				}
-
-	// 			}
-
-	// 			.icons {
-
-	// 			}
-	// 		}
-	// 	}
-	// }
-
-	// @include respond-to(large) {
-
-	// 	.logo {
-	// 		svg {
-	// 			max-width: 150px;
-	// 		}
-	// 	}
-
-	// 	.social {
-	// 		padding-top: 0;
-
-	// 		.callout {
-	// 			// font-size: 2.063rem;
-
-	// 		}
-
-	// 		.social-wrapper {
-	// 			// padding-top: .5em;
-
-	// 			.email {
-
-	// 				a {
-	// 					// font-size: 1.25rem;
-	// 				}
-
-	// 			}
-
-	// 			.icons {
-
-	// 			}
-	// 		}
-	// 	}
-	// }
+	}
 }

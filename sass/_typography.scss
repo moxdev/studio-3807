@@ -55,6 +55,10 @@ html {
         @include font-size(1.225);
     }
 
+    @include respond-to(med) {
+        @include font-size(1.35);
+    }
+
     @include respond-to(large) {
         @include font-size(1.5);
     }
