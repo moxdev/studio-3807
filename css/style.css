@@ -616,7 +616,7 @@ select option {
 }
 /* line 52, ../sass/_masthead.scss */
 #masthead .social .icons .instagram svg {
-  max-width: 30px;
+  max-width: 31px;
 }
 /* line 57, ../sass/_masthead.scss */
 #masthead .social .icons .facebook {
@@ -689,12 +689,23 @@ select option {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 @media (min-width: 1200px) {
-  /* line 114, ../sass/_masthead.scss */
+  /* line 116, ../sass/_masthead.scss */
+  #masthead .logo svg {
+    max-width: 200px;
+  }
+  /* line 122, ../sass/_masthead.scss */
   #masthead .social .callout {
-    padding: 0;
+    padding: .25em 1.5em;
+  }
+  /* line 128, ../sass/_masthead.scss */
+  #masthead .social .social-wrapper .email a {
+    font-size: .8em;
   }
 }
 
