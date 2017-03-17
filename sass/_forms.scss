@@ -19,11 +19,27 @@ form {
 			flex:1 1 45%;
 			margin: 5px;
 		}
+
+		.form-margin {
+			margin: 5px;
+		}
+
+		#form-comments {
+			margin-top: 15px;
+		}
 	}
 
-	@include respond-to(med) {
-		padding-left: 2em;
-		padding-top: 0;
+	// @include respond-to(med) {
+	// 	padding-left: 2em;
+	// 	padding-top: 0;
+	// }
+}
+
+button {
+
+	@include respond-to(small) {
+		margin-top: 15px;
+		font-size: .9em;
 	}
 }
 

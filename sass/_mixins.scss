@@ -15,7 +15,7 @@
     padding-left: 1.5625rem;
     padding-right: 1.5625rem;
 
-    @include respond-to('tablet') {
+    @include respond-to('small') {
         padding-left: 2rem;
         padding-right: 2rem;
     }

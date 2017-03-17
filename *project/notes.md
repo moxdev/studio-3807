@@ -6,3 +6,11 @@
 33px = 2.063rem
 48px = 3rem
 56px = 3.5rem
+
+$breakpoints: (
+  'x-small' : 575px,
+  'small' : 750px,
+  'med': 950px,
+  'large' : 1200px,
+  'x-large' : 1600px
+);

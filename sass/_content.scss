@@ -23,6 +23,10 @@ article {
 		color: $_color-brand-color-1;
 		margin-bottom: .25em;
 		padding-right:1em;
+
+		@include respond-to(x-small) {
+			text-align: center;
+		}
 	}
 
 	ul {
@@ -43,8 +47,15 @@ article {
 
 	    ul {
 	    	columns: 200px 2;
-	    	column-gap: 3em;
+	    	column-gap: 1em;
 	    	text-align: left;
+	    }
+	}
+
+	@include respond-to(med) {
+
+	    ul {
+	    	column-gap: 2.5em;
 	    }
 	}
 }
@@ -115,26 +126,10 @@ h2 {
 }
 
 #secondary {
-	font-size: .9375em;
+	font-size: .9em;
 	background-color: $_color-brand-color-2;
 	color: #FFF;
-	// padding-top: 2em;
 	padding-bottom: 1em;
-
-	.wrapper {
-
-		&:before, &:after {
-			@include clearfix;
-		}
-
-		&:after {
-			@include clearfix-after;
-		}
-
-		p {
-
-		}
-	}
 
 	form {
 		font-family: $_font-raleway-bold;
@@ -145,17 +140,25 @@ h2 {
 	}
 
 	@include respond-to(med) {
-		font-size: .8125em;
+	    padding-top: 2em;
 
-		.wrapper {
-			text-align: left;
-			padding-top: 70px;
-			padding-bottom: 70px;
-
-			> div {
-				float: left;
-				width: 35%;
-			}
-		}
+	    .wrappper {
+			display: flex;
+	    }
 	}
+
+	// @include respond-to(med) {
+	// 	font-size: .8125em;
+
+	// 	.wrapper {
+	// 		text-align: left;
+	// 		padding-top: 70px;
+	// 		padding-bottom: 70px;
+
+	// 		> div {
+	// 			float: left;
+	// 			width: 35%;
+	// 		}
+	// 	}
+	// }
 }
