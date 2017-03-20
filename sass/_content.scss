@@ -149,7 +149,7 @@ h2 {
 		    font-size: .8em;
 		}
 
-		@include respond-to(medium) {
+		@include respond-to(med) {
 		    font-size: .7em;
 		}
 	}

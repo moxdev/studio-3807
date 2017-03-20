@@ -112,3 +112,16 @@ select option {
     color: #333;
     text-shadow: none;
 }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $_color-brand-color-3;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $_color-brand-color-3;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $_color-brand-color-3;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $_color-brand-color-3;
+}

@@ -1,16 +1,18 @@
 <?php
 
 session_start();
-include $_SERVER['DOCUMENT_ROOT'] . '/studio-3807/inc/akismet.class.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/inc/akismet.class.php';
 
 // PREVENT DIRECT ACCESS TO THANK YOU PAGE
-if ( !isset( $_POST['form-phone']) ) {
+if ( !isset( $_POST['form-first-name']) || !isset( $_POST['form-last-name']) || !isset( $_POST['form-company']) || !isset( $_POST['form-phone']) ) {
     echo 'This page cannot be accessed directly.';
     exit();
 }
 
-if ( empty( $_POST['form-first-name']) ) {
-    echo 'You neglected to fill out required form fields.';
+if ( empty( $_POST['form-first-name']) || empty( $_POST['form-last-name']) || empty( $_POST['form-phone']) ) {
+    echo '<p>You neglected to fill out required form fields.</p>';
+    echo '<p>First Name, Last Name, and Phone are required fields.</p>';
+    echo '<p>Please use your back button to return to the form</p>';
     exit();
 }
 
@@ -23,12 +25,12 @@ if (!empty($spa) && !($spa == "4" || $spa == "four")) {
 }
 
 if($_SERVER['REQUEST_METHOD']=="POST") {
-    // $WordPressAPIKey = 'c32918c5e5bc';
-    // $MyBlogURL = 'http://www.mm4solutions.com/';
+    $WordPressAPIKey = 'c32918c5e5bc';
+    $MyBlogURL = 'http://www.mm4solutions.com/';
 
     $recipients=$_POST["recipients"];
-    // $to = str_replace("_AT_","@",$recipients);
-    $to='shane@mm4solutions.com';
+    $to ='studio3807@mm4solutions.com';
+    // $to='shane@mm4solutions.com';
 
     $first_name=strip_tags($_POST["form-first-name"]);
     $last_name=strip_tags($_POST["form-last-name"]);
@@ -39,17 +41,17 @@ if($_SERVER['REQUEST_METHOD']=="POST") {
 
     $sbjct=strip_tags($_POST["subject"]);
 
-    // $comment = array(
-    //     'author' => $first_name . $last_name,
-    //     'email' => $email,
-    //     'website' => $MyBlogURL,
-    //     'body' => $comments
-    // );
+    $comment = array(
+        'author' => $first_name . $last_name,
+        'email' => $email,
+        'website' => $MyBlogURL,
+        'body' => $comments
+    );
 
-    // $akismet = new Akismet($MyBlogURL, $WordPressAPIKey, $comment);
+    $akismet = new Akismet($MyBlogURL, $WordPressAPIKey, $comment);
 
     $from="do-not-reply@studio-3807.com";
-    $subject= "I would like to information on Studio 3807";
+    $subject= "I would like information on Studio 3807 Apartments";
     $message="First Name: " . $first_name . "<br>" . "Last Name: " . $last_name . "<br>" . "Company: " . $company . "<br>" . "Phone: " . $phone . "<br>" . "Category: " . $selected_value . "<br>" . "Comments: " . $comments;
     $header='From: '.$from."\r\n".'Reply-To: '.$from."\r\n".'MIME-Version: 1.0'."\r\n".'Content-type: text/html; charser=iso-8859-1'."\r\n".'X-Mailer: PHP/'.phpversion();
 
@@ -81,13 +83,17 @@ if($_SERVER['REQUEST_METHOD']=="POST") {
 					<div class="callout">Opening Spring 2018</div>
 					<div class="social-wrapper">
 						<div class="email">
-							<a href="mailto:info@studio3807.com">info@studio3807.com</a>
+							<!-- <a href="info@studio3807.com">info@studio3807.com</a> -->
 						</div>
 						<div class="icons">
-							<a class="instagram" href=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36.17" height="36.17" viewBox="0 0 36.17 36.17"><defs><clipPath id="a" transform="translate(-665 -368.83)"><rect x="656" y="361.57" width="54.17" height="44.43" fill="none"/></clipPath></defs><title>instagram</title><g clip-path="url(#a)"><path d="M683.12,379.8a7,7,0,1,0,7.26,7,7.16,7.16,0,0,0-7.26-7m14,4.33H693.9a10.62,10.62,0,0,1,.46,3.1,11.25,11.25,0,0,1-22.49,0,10.58,10.58,0,0,1,.46-3.1H669v15.28a1.44,1.44,0,0,0,1.44,1.44h25.19a1.44,1.44,0,0,0,1.44-1.44Zm-5.73-11.28a1.63,1.63,0,0,0-1.63,1.63v3.9a1.63,1.63,0,0,0,1.63,1.63h4.09a1.63,1.63,0,0,0,1.63-1.63v-3.9a1.63,1.63,0,0,0-1.63-1.63Zm-21.71-4h26.89a4.53,4.53,0,0,1,4.64,4.64v26.89a4.53,4.53,0,0,1-4.64,4.64H669.64a4.53,4.53,0,0,1-4.64-4.64V373.47a4.53,4.53,0,0,1,4.64-4.64" transform="translate(-665 -368.83)" fill="#fff"/></g></svg></a>
+                            <a class="icon-size" href="https://www.instagram.com/studio3807apts/?hl=en" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="458.87" height="458.81" viewBox="0 0 458.87 458.81"><title>instagram</title><path d="M404.75,0h-349C25.66,0,0,28.24,0,58.22V407.46c0,30,25.66,51.35,55.73,51.35h349c30.07,0,54.12-21.39,54.12-51.35V58.22C458.87,28.24,434.82,0,404.75,0ZM394,65.54a15.75,15.75,0,0,1,15.75,15.75v50.44A15.75,15.75,0,0,1,394,147.48H343.51a15.75,15.75,0,0,1-15.75-15.75V81.29a15.75,15.75,0,0,1,15.75-15.75Zm-163.18,80a87.84,87.84,0,1,1-88.05,87.83A87.95,87.95,0,0,1,230.77,145.54ZM409.71,395.75c0,7-7.49,13.91-14.56,13.91H66.41c-7.07,0-17.25-6.87-17.25-13.91V196.64H96.44c-3.22,16.39-5,24-5,36.74C91.49,310,154,372.31,230.77,372.31S370.06,310,370.06,233.36c0-12.69-1.74-20.33-4.94-36.72h44.59Z" fill="#fff"/></svg></a>
 
-							<a class="facebook" href=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34.18" height="34.18" viewBox="0 0 34.18 34.18"><defs><clipPath id="a" transform="translate(0 0)"><rect width="34.18" height="34.18" fill="none"/></clipPath></defs><title>facebook</title><g clip-path="url(#a)"><path d="M0,0V34.18H18.2V21H13.75V15.59H18.2V11.06a6,6,0,0,1,6-6h4.65V9.95H25.49a1.89,1.89,0,0,0-1.89,1.89v3.75h5.14L28,21H23.59v13.2H34.18V0Z" transform="translate(0 0)" fill="#fff"/></g></svg></a>
-						</div>
+                            <a class="icon-size" href="https://www.facebook.com/Studio-3807-383197422066405/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="455.73" height="455.73" viewBox="0 0 455.73 455.73"><title>facebook</title><path d="M0,0V455.73H242.7v-176H183.37V207.83H242.7V147.47A79.47,79.47,0,0,1,322.18,68h62v64.62H339.82a25.25,25.25,0,0,0-25.25,25.25v50h68.52l-9.47,71.86H314.57v176H455.73V0Z" fill="#fff"/></svg></a>
+
+                            <a class="icon-size" href="https://plus.google.com/u/3/b/117496621325186092151/117496621325186092151" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="455.73" height="455.73" viewBox="0 0 455.73 455.73"><title>google-plus</title><path d="M0,0V455.73H455.73V0ZM265.67,247c-7.79,51.19-46,80.54-95.38,80.54a100.55,100.55,0,1,1,0-201.09c26.86,0,50.4,9.59,67.53,26.23L209,181.57c-9.77-9.85-23.15-15.09-38.67-15.09-32.69,0-59.19,27.87-59.19,60.55s26.5,59.77,59.19,59.77c27.4,0,48.14-13.24,54.13-39.76H170.29V206.66h95.13A117.83,117.83,0,0,1,267.15,227,132.7,132.7,0,0,1,265.67,247Zm120.75-12.52H351.19v35.22h-25V234.52H290.93v-25h35.23V174.24h25v35.23h35.23Z" fill="#fff"/></svg></a>
+
+                            <a class="icon-size" href="https://www.youtube.com/channel/UCsZN3u83tX97-J25buhM3cA" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="455.73" height="455.73" viewBox="0 0 455.73 455.73"><title>youtube</title><path d="M218.75,171.39a6.92,6.92,0,0,0,6.91-6.91V115.73a6.91,6.91,0,0,0-13.82,0v48.75A6.92,6.92,0,0,0,218.75,171.39Z" fill="#fff"/><path d="M200.4,337.1a2.85,2.85,0,0,1-.31,1.65,17.78,17.78,0,0,1-7.88,6.17c-2.85,1-5.12-.23-5.72-3.19a18,18,0,0,1-.25-3.6c0-22-.07-67.26-.1-67.81H169.87c0,.61,0,63.59,0,75.49a22.83,22.83,0,0,0,1.69,9.41A9.4,9.4,0,0,0,179,361.1a15.26,15.26,0,0,0,7.64-.69c5.08-1.75,9.06-5.05,12.57-9,.31-.35.64-.69,1.23-1.32V360h16.31V316.73c0-15,0-46.55,0-46.55l-16.32,0Z" fill="#fff"/><path d="M277.51,277.33c-3.44-7.33-10.67-9.27-16.94-7.7a18.76,18.76,0,0,0-9.41,6,16.42,16.42,0,0,0-1.76,2.79v-40H233.06V359.94H249.4v-6.82L251,354.8a18.43,18.43,0,0,0,13.91,6.35c6.9.07,11.7-3.27,13.88-9.83a29.81,29.81,0,0,0,1.35-9.37q0-25.48,0-51A31.58,31.58,0,0,0,277.51,277.33Zm-14.22,62.59a13.1,13.1,0,0,1-.3,2.72c-.75,3.56-3.46,5.16-7.3,4.37a10.71,10.71,0,0,1-5.71-3.51c-.07-.08-.53-.7-.53-.7h0v-1.33l0-54h0a4.44,4.44,0,0,1,1.12-1.67,8.53,8.53,0,0,1,6.69-2.51,5.45,5.45,0,0,1,4.9,3.35,14.37,14.37,0,0,1,1.14,5.06c.08,15.94.05,31.88,0,47.83Z" fill="#fff"/><polygon points="169.91 238.41 113.31 238.41 113.31 255.82 132.38 255.82 132.38 359.95 150.8 359.95 150.8 255.78 169.91 255.78 169.91 238.41" fill="#fff"/><path d="M324.19,328.09v11.53a7.29,7.29,0,1,1-14.57,0V317.19h31.29s.18-15.65,0-22.75a48.23,48.23,0,0,0-.9-9.06c-1.62-7.68-5.75-13.47-13.48-16a28.49,28.49,0,0,0-7.1-1.29c-8-.51-14.91,1.76-20.35,7.85-4.77,5.33-6.43,11.75-6.44,18.71,0,13.31-.09,26.63,0,39.94a47.47,47.47,0,0,0,1.19,10.15c1.66,7.09,5.53,12.66,12.36,15.74,5,2.26,10.26,2.37,15.58,1.59,8.58-1.26,14.43-5.86,17.26-14.15,2.13-6.21,1.88-19.82,1.88-19.82Zm-14.57-37.4a7.29,7.29,0,1,1,14.57,0v12.59H309.62Z" fill="#fff"/><path d="M0,0V455.73H455.73V0ZM256.73,95h16.6v68.82a15.55,15.55,0,0,0,.23,2.73c.5,2.84,2.6,4.17,5.33,3.22a17.84,17.84,0,0,0,8-6.17,3,3,0,0,0,.25-1.68V95h16.72v90.24H287.16l0-9.7c-1.85,1.82-3.43,3.52-5.16,5.05a22.59,22.59,0,0,1-10.63,5.52c-6.25,1.22-11.58-.75-13.57-7.23a23.84,23.84,0,0,1-1.08-6.73Zm-38-2.26a23.94,23.94,0,0,1,23.94,23.94v46.86a23.94,23.94,0,1,1-47.89,0V116.68A23.94,23.94,0,0,1,218.75,92.73ZM154.34,63.07s7.6,32.3,11.23,47.6h0c3.63-15.3,11.23-47.6,11.23-47.6h19s-14.62,48.49-21.16,70.11a8.62,8.62,0,0,0-.34,2.45v49.58H156.81V135.63a8.62,8.62,0,0,0-.34-2.45c-6.54-21.62-21.16-70.11-21.16-70.11ZM363.58,350.86a40.77,40.77,0,0,1-39.89,40.77q-95.8,2.05-191.65,0a40.77,40.77,0,0,1-39.88-40.77V251.1A40.76,40.76,0,0,1,132,210.34q95.82-2.05,191.65,0a40.77,40.77,0,0,1,39.89,40.76Z" fill="#fff"/><rect x="249.43" y="287.5" height="53.97" fill="#005f83"/><path d="M324.19,290.68a7.29,7.29,0,1,0-14.57,0v12.59h14.57Z" fill="#005f83"/><path d="M323.69,210.34q-95.8-2.05-191.65,0A40.76,40.76,0,0,0,92.16,251.1v99.76A40.77,40.77,0,0,0,132,391.63q95.82,2.05,191.65,0a40.77,40.77,0,0,0,39.89-40.77V251.1A40.77,40.77,0,0,0,323.69,210.34ZM150.8,360H132.38V255.83H113.31V238.41h56.6v17.38H150.8Zm65.92-43.22V360H200.41v-9.88c-.59.63-.92,1-1.23,1.32-3.51,4-7.49,7.26-12.57,9a15.26,15.26,0,0,1-7.64.69,9.4,9.4,0,0,1-7.39-5.88,22.83,22.83,0,0,1-1.69-9.41c0-11.9,0-74.88,0-75.49h16.27c0,.55.09,45.76.1,67.81a18,18,0,0,0,.25,3.6c.6,3,2.87,4.23,5.72,3.19a17.78,17.78,0,0,0,7.88-6.17,2.85,2.85,0,0,0,.31-1.65V270.22l16.32,0S216.72,301.75,216.72,316.73Zm62.05,34.59c-2.18,6.56-7,9.9-13.88,9.83A18.43,18.43,0,0,1,251,354.8l-1.58-1.68v6.82H233.06V238.39H249.4v40a16.42,16.42,0,0,1,1.76-2.79,18.76,18.76,0,0,1,9.41-6c6.27-1.57,13.5.37,16.94,7.7a31.58,31.58,0,0,1,2.6,13.65q0,25.48,0,51A29.81,29.81,0,0,1,278.77,351.32Zm60.35-3.42c-2.83,8.29-8.68,12.89-17.26,14.15-5.32.78-10.59.67-15.58-1.59-6.83-3.08-10.7-8.65-12.36-15.74a47.47,47.47,0,0,1-1.19-10.15c-.13-13.31-.07-26.63,0-39.94,0-7,1.67-13.38,6.44-18.71,5.44-6.09,12.4-8.36,20.35-7.85a28.49,28.49,0,0,1,7.1,1.29c7.73,2.54,11.86,8.33,13.48,16a48.23,48.23,0,0,1,.9,9.06c.13,7.1,0,22.75,0,22.75H309.62v22.43a7.29,7.29,0,1,0,14.57,0V328.09H341S341.25,341.7,339.12,347.91Z" fill="#005f83"/><path d="M263,342.64c-.75,3.56-3.46,5.16-7.3,4.37A10.71,10.71,0,0,1,250,343.5c-.07-.08-.53-.7-.53-.7h0s.46.62.53.7a10.71,10.71,0,0,0,5.71,3.51c3.84.79,6.55-.81,7.3-4.37a13.1,13.1,0,0,0,.3-2.72v0A13.1,13.1,0,0,1,263,342.64Z" fill="#005f83"/><path d="M263.26,291.74a14.36,14.36,0,0,0-1.14-5.06,5.45,5.45,0,0,0-4.9-3.35,8.53,8.53,0,0,0-6.69,2.51,4.44,4.44,0,0,0-1.12,1.67l0,54h0v1.33s.46.62.53.7a10.71,10.71,0,0,0,5.71,3.51c3.84.79,6.55-.81,7.3-4.37a13.1,13.1,0,0,0,.3-2.72v-.36C263.31,323.61,263.34,307.67,263.26,291.74Z" fill="#005f83"/><path d="M263.26,291.73a14.37,14.37,0,0,0-1.14-5.06,5.45,5.45,0,0,0-4.9-3.35,8.53,8.53,0,0,0-6.69,2.51,4.44,4.44,0,0,0-1.12,1.67h0a4.44,4.44,0,0,1,1.12-1.67,8.53,8.53,0,0,1,6.69-2.51,5.45,5.45,0,0,1,4.9,3.35,14.36,14.36,0,0,1,1.14,5.06c.08,15.94.05,31.88,0,47.83C263.31,323.61,263.34,307.67,263.26,291.73Z" fill="#005f83"/><path d="M271.39,186.11A22.59,22.59,0,0,0,282,180.59c1.73-1.53,3.31-3.23,5.16-5.05l0,9.7h16.72V95H287.17v66.92a3,3,0,0,1-.25,1.68,17.84,17.84,0,0,1-8,6.17c-2.73.95-4.83-.39-5.33-3.22a15.55,15.55,0,0,1-.23-2.73V95h-16.6v77.16a23.84,23.84,0,0,0,1.08,6.73C259.81,185.36,265.14,187.34,271.39,186.11Z" fill="#005f83"/><path d="M156.82,135.63v49.58h17.55V135.63a8.62,8.62,0,0,1,.34-2.45c6.54-21.62,21.16-70.11,21.16-70.11h-19s-7.61,32.3-11.23,47.6h0c-3.63-15.3-11.23-47.6-11.23-47.6h-19s14.62,48.49,21.16,70.11A8.62,8.62,0,0,1,156.82,135.63Z" fill="#005f83"/><path d="M194.81,163.53a23.94,23.94,0,1,0,47.89,0V116.68a23.94,23.94,0,1,0-47.89,0Zm17-47.81a6.91,6.91,0,0,1,13.82,0v48.75a6.91,6.91,0,0,1-13.82,0Z" fill="#005f83"/></svg></svg></a>
+                        </div>
 					</div>
 				</div>
 			</header>
@@ -95,15 +101,8 @@ if($_SERVER['REQUEST_METHOD']=="POST") {
 				<article>
 					<img src="imgs/studio3807-exterior.jpg" alt="Studio 3807 Exterior" class="highlight-img">
 					<div class="article-content wrapper">
-						<h1>Experience The Art of Living</h1>
-						<ul>
-							<li>Contemporary Studio, 1, 2 & 3 Bedroom Apartments</li>
-							<li>Courtyard with Grills, Outdoor Entertainment Area & Seating</li>
-							<li>Bike Share & Bike Storage On Site</li>
-							<li>Retail Space, Artist Studios & Gallery</li>
-							<li>Pet Friendly Community</li>
-							<li>Expanding the vision of the Gateway Arts District and the Art Lives Here Movement</li>
-						</ul>
+						<h1>Thank you very much for your interest in Studio 3807!</h1>
+						<p>We will be sending you periodic emails as we get closer to the grand opening in Spring 2018, but in the meantime please follow us on <a href="https://www.facebook.com/Studio-3807-383197422066405/">Facebook</a> for updates on construction, events, retailers, the local community, and much more!</p>
 					</div>
 					<h2>Sustainable, Solar-Powered & Energy-Efficient Living</h2>
 					<div class="pics">
@@ -120,37 +119,6 @@ if($_SERVER['REQUEST_METHOD']=="POST") {
 							<img src="imgs/lobby.jpg" alt="Lobby">
 						</div>
 					</div>
-					<aside id="secondary">
-						<div class="wrapper">
-							<div class="left-text">
-								<p>For more information please fill out this form and we will be in touch shortly.</p>
-							</div>
-							<form action="thank-you.php" method="POST" name="form-contact" novalidate>
-								<input type="hidden" name="recipients" value="don-not-reply@studio3807.com">
-								<input type="hidden" name="subject" value="I would like to receive information about Studio 3807">
-
-								<input class="flex" type="text" name="form-first-name" id="form-first-name" placeholder="First Name">
-								<input class="flex" type="text" name="form-last-name" id="form-last-name" placeholder="Last Name">
-
-								<input class="flex" type="text" name="form-company" id="form-company" placeholder="Company (for retail)">
-
-								<input class="flex" type="tel" name="form-phone" id="form-phone" placeholder="Phone">
-
-								<select class="form-margin form-dropdown">
-									<option selected="default" disabled>I am interested in &#9660;</option>
-									<option value="apartment">Apartments</option>
-									<option value="retail">Retail Space</option>
-									<option value="apart-retail">Both Apartments & Retail Space</option>
-								</select>
-								<textarea class="form-margin" name="form-comments" id="form-comments" cols="30" rows="3" placeholder="Comments"></textarea>
-
-								<label class="honey" for="spam">What is three plus 2?</label>
-								<input id="spam" class="honey" type="text" maxlength="4" size="4" name="spam">
-								<div class="error-box"></div>
-								<button type="submit">Tell Me More About Studio 3807!</button>
-							</form>
-						</div>
-					</aside><!-- #secondary -->
 				</article>
 			</main><!-- #main -->
 			<footer id="colophon">

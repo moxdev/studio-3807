@@ -330,14 +330,21 @@ html {
     font-size: 1.5rem;
   }
 }
+@media (min-width: 1600px) {
+  /* line 50, ../sass/_typography.scss */
+  html {
+    font-size: 27.2px;
+    font-size: 1.7rem;
+  }
+}
 
-/* line 67, ../sass/_typography.scss */
+/* line 71, ../sass/_typography.scss */
 body {
   color: #333;
   font-family: "Montserrat-Regular", sans-serif;
 }
 
-/* line 72, ../sass/_typography.scss */
+/* line 76, ../sass/_typography.scss */
 input,
 select,
 button,
@@ -346,7 +353,7 @@ textarea {
   color: #333;
 }
 
-/* line 80, ../sass/_typography.scss */
+/* line 84, ../sass/_typography.scss */
 h1, h2 {
   margin: 0;
   font-weight: normal;
@@ -354,13 +361,13 @@ h1, h2 {
   letter-spacing: 1px;
 }
 
-/* line 87, ../sass/_typography.scss */
+/* line 91, ../sass/_typography.scss */
 h1 {
   font-size: 1.75em;
   line-height: 1.0625;
 }
 
-/* line 100, ../sass/_typography.scss */
+/* line 104, ../sass/_typography.scss */
 h2 {
   font-size: 1.3em;
   line-height: 1.125;
@@ -545,6 +552,30 @@ select option {
   text-shadow: none;
 }
 
+/* line 116, ../sass/_forms.scss */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #888B8D;
+}
+
+/* line 119, ../sass/_forms.scss */
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #888B8D;
+}
+
+/* line 122, ../sass/_forms.scss */
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #888B8D;
+}
+
+/* line 125, ../sass/_forms.scss */
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #888B8D;
+}
+
 /*--------------------------------------------------------------
 # Masthead
 --------------------------------------------------------------*/
@@ -611,20 +642,12 @@ select option {
   margin-top: .5em;
 }
 /* line 50, ../sass/_masthead.scss */
-#masthead .social .icons .instagram {
-  margin: 0 2px;
+#masthead .social .icons .icon-size {
+  margin: 1px 3px 1px;
 }
 /* line 52, ../sass/_masthead.scss */
-#masthead .social .icons .instagram svg {
-  max-width: 31px;
-}
-/* line 57, ../sass/_masthead.scss */
-#masthead .social .icons .facebook {
-  margin: 1px 2px 2px;
-}
-/* line 59, ../sass/_masthead.scss */
-#masthead .social .icons .facebook svg {
-  max-width: 30px;
+#masthead .social .icons .icon-size svg {
+  max-width: 35px;
 }
 @media (min-width: 750px) {
   /* line 1, ../sass/_masthead.scss */
@@ -640,26 +663,26 @@ select option {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  /* line 72, ../sass/_masthead.scss */
+  /* line 65, ../sass/_masthead.scss */
   #masthead .logo {
     padding-top: 0;
     padding-bottom: .5em;
   }
-  /* line 75, ../sass/_masthead.scss */
+  /* line 68, ../sass/_masthead.scss */
   #masthead .logo svg {
     max-width: 150px;
   }
-  /* line 80, ../sass/_masthead.scss */
+  /* line 73, ../sass/_masthead.scss */
   #masthead .social {
     padding-top: 0;
   }
-  /* line 83, ../sass/_masthead.scss */
+  /* line 76, ../sass/_masthead.scss */
   #masthead .social .callout {
     font-size: 1.2em;
     padding-top: .2em;
     padding-bottom: .2em;
   }
-  /* line 89, ../sass/_masthead.scss */
+  /* line 82, ../sass/_masthead.scss */
   #masthead .social .social-wrapper {
     width: 100%;
     display: -webkit-inline-box;
@@ -673,7 +696,7 @@ select option {
             align-items: flex-end;
     padding-top: .5em;
   }
-  /* line 96, ../sass/_masthead.scss */
+  /* line 89, ../sass/_masthead.scss */
   #masthead .social .social-wrapper .email {
     -webkit-box-flex: 3;
         -ms-flex: 3;
@@ -681,7 +704,7 @@ select option {
     padding-right: .2em;
     text-align: right;
   }
-  /* line 102, ../sass/_masthead.scss */
+  /* line 95, ../sass/_masthead.scss */
   #masthead .social .social-wrapper .icons {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -695,17 +718,21 @@ select option {
   }
 }
 @media (min-width: 1200px) {
-  /* line 116, ../sass/_masthead.scss */
+  /* line 109, ../sass/_masthead.scss */
   #masthead .logo svg {
     max-width: 200px;
   }
-  /* line 122, ../sass/_masthead.scss */
+  /* line 115, ../sass/_masthead.scss */
   #masthead .social .callout {
     padding: .25em 1.5em;
   }
-  /* line 128, ../sass/_masthead.scss */
+  /* line 121, ../sass/_masthead.scss */
   #masthead .social .social-wrapper .email a {
     font-size: .8em;
+  }
+  /* line 129, ../sass/_masthead.scss */
+  #masthead .social .social-wrapper .icons .icon-size svg {
+    max-width: 42px;
   }
 }
 
@@ -979,6 +1006,12 @@ h2 {
   /* line 146, ../sass/_content.scss */
   #secondary button {
     font-size: .8em;
+  }
+}
+@media (min-width: 950px) {
+  /* line 146, ../sass/_content.scss */
+  #secondary button {
+    font-size: .7em;
   }
 }
 @media (min-width: 950px) {

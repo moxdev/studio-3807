@@ -47,17 +47,10 @@
 			align-items:center;
 			margin-top: .5em;
 
-			.instagram {
-				margin: 0 2px;
+			.icon-size {
+				margin: 1px 3px 1px;
 				svg {
-					max-width: 31px;
-				}
-			}
-
-			.facebook {
-				margin: 1px 2px 2px;
-				svg {
-					max-width: 30px;
+					max-width: 35px;
 				}
 			}
 		}
@@ -127,6 +120,15 @@
 
 					a {
 						font-size:.8em;
+					}
+				}
+
+				.icons {
+
+					.icon-size {
+						svg {
+							max-width: 42px;
+						}
 					}
 				}
 			}

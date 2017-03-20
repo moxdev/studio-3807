@@ -340,6 +340,26 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/imgs\/assets\/facebook.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/assets\/facebook.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/imgs\/assets\/google-plus.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/assets\/google-plus.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/imgs\/assets\/header-image-3000.jpg": {
 		"ft": 16384,
 		"iS": 738273,
@@ -378,6 +398,16 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/imgs\/assets\/instagram.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/assets\/instagram.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/imgs\/assets\/lobby.jpg": {
 		"ft": 16384,
 		"iS": 160136,
@@ -396,6 +426,87 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/imgs\/assets\/tinys\/tinified-1.zip": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/imgs\/assets\/tinys\/tinified-1.zip",
+		"oF": 0
+		},
+	"\/imgs\/assets\/tinys\/tinified-1\/courtyard.jpg": {
+		"ft": 16384,
+		"iS": 110281,
+		"oA": 0,
+		"oAP": "\/imgs\/assets\/tinys\/tinified-1\/courtyard.jpg",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/imgs\/assets\/tinys\/tinified-1\/exterior-2.jpg": {
+		"ft": 16384,
+		"iS": 107821,
+		"oA": 0,
+		"oAP": "\/imgs\/assets\/tinys\/tinified-1\/exterior-2.jpg",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/imgs\/assets\/tinys\/tinified-1\/lobby.jpg": {
+		"ft": 16384,
+		"iS": 138903,
+		"oA": 0,
+		"oAP": "\/imgs\/assets\/tinys\/tinified-1\/lobby.jpg",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/imgs\/assets\/tinys\/tinified-1\/lounge.jpg": {
+		"ft": 16384,
+		"iS": 101944,
+		"oA": 0,
+		"oAP": "\/imgs\/assets\/tinys\/tinified-1\/lounge.jpg",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/imgs\/assets\/tinys\/tinified\/header-image.jpg": {
+		"ft": 16384,
+		"iS": 180495,
+		"oA": 0,
+		"oAP": "\/imgs\/assets\/tinys\/tinified\/header-image.jpg",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/imgs\/assets\/tinys\/tinified\/header-image.png": {
+		"ft": 32768,
+		"iS": 359153,
+		"l": 1,
+		"oA": 0,
+		"oAP": "\/imgs\/assets\/tinys\/tinified\/header-image.png",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/imgs\/assets\/youtube.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/assets\/youtube.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/imgs\/big-instagram-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/big-instagram-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/imgs\/courtyard.jpg": {
 		"ft": 16384,
 		"iS": 110281,
@@ -413,46 +524,6 @@
 		"oF": 0,
 		"opt": 0,
 		"q": 100
-		},
-	"\/imgs\/facebook.png": {
-		"ft": 32768,
-		"iS": 1205,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/imgs\/facebook.png",
-		"oF": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/imgs\/facebook.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/imgs\/facebook.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/imgs\/instagram.png": {
-		"ft": 32768,
-		"iS": 2716,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/imgs\/instagram.png",
-		"oF": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/imgs\/instagram.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/imgs\/instagram.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
 		},
 	"\/imgs\/lobby.jpg": {
 		"ft": 16384,
@@ -497,67 +568,6 @@
 		"iS": 442462,
 		"oA": 0,
 		"oAP": "\/imgs\/studio3807-exterior.jpg",
-		"oF": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/imgs\/tinys\/tinified-1.zip": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/imgs\/tinys\/tinified-1.zip",
-		"oF": 0
-		},
-	"\/imgs\/tinys\/tinified-1\/courtyard.jpg": {
-		"ft": 16384,
-		"iS": 110281,
-		"oA": 0,
-		"oAP": "\/imgs\/tinys\/tinified-1\/courtyard.jpg",
-		"oF": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/imgs\/tinys\/tinified-1\/exterior-2.jpg": {
-		"ft": 16384,
-		"iS": 107821,
-		"oA": 0,
-		"oAP": "\/imgs\/tinys\/tinified-1\/exterior-2.jpg",
-		"oF": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/imgs\/tinys\/tinified-1\/lobby.jpg": {
-		"ft": 16384,
-		"iS": 138903,
-		"oA": 0,
-		"oAP": "\/imgs\/tinys\/tinified-1\/lobby.jpg",
-		"oF": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/imgs\/tinys\/tinified-1\/lounge.jpg": {
-		"ft": 16384,
-		"iS": 101944,
-		"oA": 0,
-		"oAP": "\/imgs\/tinys\/tinified-1\/lounge.jpg",
-		"oF": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/imgs\/tinys\/tinified\/header-image.jpg": {
-		"ft": 16384,
-		"iS": 180495,
-		"oA": 0,
-		"oAP": "\/imgs\/tinys\/tinified\/header-image.jpg",
-		"oF": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/imgs\/tinys\/tinified\/header-image.png": {
-		"ft": 32768,
-		"iS": 359153,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/imgs\/tinys\/tinified\/header-image.png",
 		"oF": 0,
 		"opt": 0,
 		"q": 100
